@@ -31,23 +31,18 @@ public class printMap {
 				for (int y=0; y < rows; y++) {
 				    for (int x=0; x < cols; x++) {
 
-		                rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
-		                rect.setStroke(Color.WHITE);
-		                root.getChildren().add(rect);
-				    	
-				        for(int i = 0; i != playerList.size(); i++) {
-				        	if(playerList.get(i).getMapX() == x && playerList.get(i).getMapY() == y) {
-				                rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
-				                rect.setStroke(Color.BLUE);
-				                root.getChildren().add(rect);
-				        	}
-				        }
-				        for(int i = 0; i != mobList.size(); i++) {
-				        	if(mobList.get(i).getMapX() == x && mobList.get(i).getMapY() == y) {
-				                rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
-				                rect.setStroke(Color.RED);
-				                root.getChildren().add(rect);
-				        	}
+				    	if(map[x][y].getType() == 'n') {
+				    		rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
+				    		rect.setStroke(Color.WHITE);
+				    		root.getChildren().add(rect);
+				    	}else if(map[x][y].getType() == 'p' ) {
+			                rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
+			                rect.setStroke(Color.BLUE);
+			                root.getChildren().add(rect);
+			        	}else if(map[x][y].getType() == 'h') {
+			                rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
+			                rect.setStroke(Color.RED);
+			                root.getChildren().add(rect);
 				        }
 				    }
 					System.out.println();
