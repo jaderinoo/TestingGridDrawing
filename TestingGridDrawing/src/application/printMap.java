@@ -24,7 +24,7 @@ public class printMap {
 		      //Setting title to the Stage 
 		      Main.window.setTitle("Drawing a Rectangle"); 
 		      
-		      int horizontal = 20, vertical = 20;
+		      int horizontal = 32, vertical = 32;
 		      Rectangle rect = null;
 		      
 				   //Print map
