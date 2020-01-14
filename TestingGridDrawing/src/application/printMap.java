@@ -4,8 +4,10 @@ import java.util.ArrayList;
 
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 
 public class printMap {
@@ -38,6 +40,9 @@ public class printMap {
 				    	}else if(map[x][y].getType() == 'p' ) {
 			                rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
 			                rect.setStroke(Color.BLUE);
+			                
+				    		Image img = new Image("application\\tilesets\\p.png");
+				    		rect.setFill(new ImagePattern(img));
 			                root.getChildren().add(rect);
 			        	}else if(map[x][y].getType() == 'h') {
 			                rect = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
