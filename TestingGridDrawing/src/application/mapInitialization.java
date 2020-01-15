@@ -60,15 +60,7 @@ public class mapInitialization {
 			System.out.println(mobList.get(i).getName() + " X: " + mobList.get(i).getMapX()
 				+ "  Y: " + mobList.get(i).getMapY());
 		}
-		
-		
-		printMap.printMap(map,rows,cols,playerListCurrent,mobList);
-		
-		//We have the Map, mobList, playerList, mapDetails, tileSets, and all positions
-		
-		
-		//Move onto game
-		
+		printMap.mapPrinter(map,rows,cols,playerListCurrent,mobList);
     }
     
 	public static void addPlayerLocation(int x, int y, int occupantInt) {
