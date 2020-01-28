@@ -60,7 +60,12 @@ public class mapInitialization {
 			System.out.println(mobList.get(i).getName() + " X: " + mobList.get(i).getMapX()
 				+ "  Y: " + mobList.get(i).getMapY());
 		}
-		printMap.mapPrinter(map,rows,cols,playerListCurrent,mobList);
+		
+		//Print map background
+		printMap.mapPrinter(map,rows,cols);
+		
+		//Print map forground
+		printMap.spriteLayer(map,rows,cols);
     }
     
 	public static void addPlayerLocation(int x, int y, int occupantInt) {
