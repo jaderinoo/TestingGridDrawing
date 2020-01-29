@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -13,11 +14,14 @@ import javafx.scene.shape.Rectangle;
 
 public class printMap {
 	static AnchorPane root = new AnchorPane();
+	static double horizontalSetter = 0;
+	static double verticalSetter = 0;
+	
 	   public static void mapPrinter(GridSpace[][] map, int rows, int cols) {
 	        
 	        Scene scene = new Scene(root, Main.window.getWidth(), Main.window.getHeight());
-	        double horizontalSetter = (Main.window.getWidth()/cols);
-	        double verticalSetter = (Main.window.getHeight()/rows);
+	        horizontalSetter = (Main.window.getWidth()/cols);
+	        verticalSetter = (Main.window.getHeight()/rows);
 	        
 	        double horizontal = 32*(horizontalSetter/32), vertical = 32*(verticalSetter/32);
 	        Rectangle rect = null;
@@ -44,8 +48,6 @@ public class printMap {
 	   public static void spriteLayer(GridSpace[][] map, int rows, int cols) throws InterruptedException {
 
 		   Pane spriteLayer = new Pane(); 
-	       double horizontalSetter = (Main.window.getWidth()/cols);
-	       double verticalSetter = (Main.window.getHeight()/rows);
 	       Rectangle sprite = null;
 	       double horizontal = 32*(horizontalSetter/32), vertical = 32*(verticalSetter/32);
 	       
