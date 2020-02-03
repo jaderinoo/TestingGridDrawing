@@ -77,7 +77,12 @@ public class mapInitialization {
 		enemyCounter++;
 		if(mobType == 'f') {
 			mobList.add(new Mob1("FootSoldier" + enemyCounter, level*2, level*2, level*2, level*2, level*5, level*1, level*12, x, y, mobType));
-			
+			mobList.get(mobList.size() - 1).setImg("Footsoldier");
+		}
+		
+		if(mobType == 'k') {
+			mobList.add(new Mob1("Knight" + enemyCounter, level*2, level*2, level*2, level*2, level*5, level*1, level*12, x, y, mobType));
+			mobList.get(mobList.size() - 1).setImg("Knight");
 		}
 	}
 

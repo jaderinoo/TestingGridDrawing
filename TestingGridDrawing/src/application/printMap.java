@@ -52,7 +52,6 @@ public class printMap {
 	       double horizontal = 32*(horizontalSetter/32), vertical = 32*(verticalSetter/32);
 	       
 	       Image imgPlayer = new Image("application\\tilesets\\u.png");
-	       Image imgMob = new Image("application\\tilesets\\gifTest.gif");
 	       for (int y=0; y < rows; y++) {
 			    for (int x=0; x < cols; x++) {
 			    	for (int i = 0; i < mapInitialization.playerListCurrent.size(); i++) {
@@ -66,7 +65,7 @@ public class printMap {
 			    	for (int i = 0; i < mapInitialization.mobList.size(); i++) {
 				    	if(x == mapInitialization.mobList.get(i).getMapX() && y == mapInitialization.mobList.get(i).getMapY()) {
 				    		sprite = new Rectangle(horizontal * y, vertical * x, horizontal, vertical);
-				    		sprite.setFill(new ImagePattern(imgMob));
+				    		sprite.setFill(new ImagePattern(mapInitialization.mobList.get(i).getImg()));
 				    		spriteLayer.getChildren().add(sprite);
 				    	}
 			    	}
