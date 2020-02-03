@@ -1,6 +1,8 @@
 package application;
 import java.util.concurrent.ThreadLocalRandom;
 
+import javafx.scene.image.Image;
+
 public class Player {
 
 	    int strength;
@@ -13,23 +15,30 @@ public class Player {
 		int currentHp;
 		int mapX;
 		int mapY;
-		char image;
+		Image charImg;
 		String name;
 
 		public Player(String name) {
 	    	
 	    	//Use this as a ledger for player.txt 
 	    	this.name = name;
-	    	this.image = 'p';
+
+	    	setImg(name);
+	    	
 	   }
 		
 		public String getName() {
 	        return name;
 	    }
 		
-		public char getImage() {
-	        return image;
-	    }
+		public void setImg(String name) {
+			System.out.println("Im here");
+			this.charImg = new Image("application\\tilesets\\" + name + ".png");
+		}
+		
+		public Image getImg() {
+			return charImg;
+		}
 
 		public int setMapX(int x) {
 			this.mapX = x;

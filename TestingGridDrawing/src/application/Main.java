@@ -41,8 +41,8 @@ public class Main extends Application {
 			window.show();
 			
 	    	
-	    	playerList.add(new Player("name1"));
-	    	playerList.add(new Player("name2"));
+	    	playerList.add(new Player("MainCharacter"));
+	    	playerList.add(new Player("Karl"));
 	    	
 	    	
 	    	mapInitialization.init(playerList, "test");
